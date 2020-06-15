@@ -24,6 +24,8 @@ import org.squiddev.plethora.gameplay.neural.ItemNeuralConnector;
 import org.squiddev.plethora.gameplay.neural.ItemNeuralInterface;
 import org.squiddev.plethora.gameplay.redstone.BlockRedstoneIntegrator;
 import org.squiddev.plethora.gameplay.redstone.TileRedstoneIntegrator;
+import org.squiddev.plethora.gameplay.tiny.BlockTinyTurtle;
+import org.squiddev.plethora.gameplay.tiny.ItemTinyTurtle;
 
 import java.util.Objects;
 
@@ -38,8 +40,10 @@ public final class Registration {
 	public static ItemNeuralConnector itemNeuralConnector;
 	public static ItemModule itemModule;
 	public static ItemKeyboard itemKeyboard;
+	public static ItemTinyTurtle itemTinyTurtle;
 	public static BlockManipulator blockManipulator;
 	public static BlockRedstoneIntegrator blockRedstoneIntegrator;
+	public static BlockTinyTurtle blockTinyTurtle;
 
 	private Registration() {
 	}
@@ -48,7 +52,8 @@ public final class Registration {
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(
 			blockManipulator = new BlockManipulator(),
-			blockRedstoneIntegrator = new BlockRedstoneIntegrator()
+			blockRedstoneIntegrator = new BlockRedstoneIntegrator(),
+			blockTinyTurtle = new BlockTinyTurtle()
 		);
 
 		registerTiles();
@@ -72,7 +77,8 @@ public final class Registration {
 			itemModule = new ItemModule(),
 			itemKeyboard = new ItemKeyboard(),
 			new ItemBlockBase(blockManipulator),
-			new ItemBlockBase(blockRedstoneIntegrator)
+			new ItemBlockBase(blockRedstoneIntegrator),
+			itemTinyTurtle = new ItemTinyTurtle(blockTinyTurtle)
 		);
 
 		registerUpgrades();

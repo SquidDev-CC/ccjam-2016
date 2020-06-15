@@ -86,6 +86,10 @@ adjective.plethora.clock=Chronal
 adjective.plethora.daylight_detector=Photosensitive
 adjective.plethora.note_block=Acoustic
 
+# Tiny turtle
+tile.plethora.tiny_turtle.name=Tiny Turtle
+tile.plethora.tiny_turtle.desc=It loves you, and would never stab you.
+
 # Minecart
 entity.plethora.plethora:minecartComputer.name=Minecart computer
 

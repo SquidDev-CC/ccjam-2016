@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "plethora:tiny_turtle" },
+		"facing=south": { "model": "plethora:tiny_turtle", "y": 180 },
+		"facing=west": { "model": "plethora:tiny_turtle", "y": 270 },
+		"facing=east": { "model": "plethora:tiny_turtle", "y": 90 }
+	}
+}
